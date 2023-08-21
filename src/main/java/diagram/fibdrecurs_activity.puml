@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+
+start
+
+if (n <= 0) then (true)
+  :Return 0;
+else (false)
+  if (n == 1) then (true)
+    :Return 1;
+  else (false)
+    :Initialize prev = 0;
+    :Initialize current = 1;
+    :Initialize i = 2;
+
+    while (i <= n) is (true)
+      :temp = current;
+      :current = current + prev;
+      :prev = temp;
+      :Increment i;
+    endwhile (false)
+    :Return current;
+  endif
+endif
+
+stop
+@enduml

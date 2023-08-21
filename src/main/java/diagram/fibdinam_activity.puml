@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+
+start
+
+if (n <= 0) then (true)
+  :Return 0;
+else (false)
+  if (n == 1) then (true)
+    :Return 1;
+  else (false)
+    :Initialize fibArray with size n + 1;
+    :Set fibArray[0] = 0;
+    :Set fibArray[1] = 1;
+    :Initialize i = 2;
+
+    while (i <= n) is (true)
+      :fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+      :Increment i;
+    endwhile (false)
+    :Return fibArray[n];
+  endif
+endif
+
+stop
+
+@enduml
